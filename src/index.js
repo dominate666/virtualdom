@@ -1,10 +1,12 @@
 import h from './mysnabbdom/h'
-let myNode1=h('div',{},[
-    h('p',{},'哈哈'),
-    h('p',{},'嘻嘻'),
-    h('div',{},[
-        h('p',{},'123')
-    ]),
-    h('div',{},h('p',{},'666'))
+import patch from './mysnabbdom/patch'
+
+let myVnode2=h('ul',{},[
+    h('li',{},'A'),
+    h('li',{},'B'),
+    h('li',{},'C'),
+    h('li',{},'D')
 ])
-console.log('myNode1',myNode1)
+let myVnode1=h('ul',{},'hello');
+const container=document.getElementById("container")
+patch(container,myVnode1)
