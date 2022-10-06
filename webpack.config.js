@@ -8,6 +8,7 @@ module.exports={
         filename:"bundle.js",
         publicPath:'/xuni/'  //访问localhost:8080/xuni/bundle.js
     },
+    devtool:'inline-source-map',
     plugins:[
         new htmlWebpackPlugin({
             filename:"test.html",
